@@ -2,7 +2,7 @@
 
 A responsive, single-file portfolio website for a Senior Data Scientist and Data & Analytics Leader with 12+ years of experience in fintech, e-commerce and the public sector.
 
-**Live site:** `https://misdianti.github.io/` (replace after enabling GitHub Pages)
+**Live site:** [misdianti.github.io](https://misdianti.github.io/)
 
 ## Sections
 
@@ -33,10 +33,9 @@ A responsive, single-file portfolio website for a Senior Data Scientist and Data
 ```
 .
 ├── index.html   # the entire site (markup, styles, content and scripts)
+├── .nojekyll    # tells GitHub Pages to serve files as they are, with no Jekyll build
 └── README.md
 ```
-
-The portfolio file was created as `portfolio.html`. Rename it to `index.html` so GitHub Pages serves it as the home page.
 
 ## Run locally
 
@@ -66,12 +65,16 @@ Contact details, education and publications are written directly in the HTML. Se
 
 ## Deploy with GitHub Pages
 
-1. Push `index.html` and `README.md` to the repository.
+The repository is named `misdianti.github.io`, so GitHub serves it at the root address `https://misdianti.github.io/`.
+
+1. Push `index.html`, `.nojekyll` and `README.md` to the `main` branch.
 2. Open **Settings > Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**, select `main` and the `/ (root)` folder, then save.
-4. After a minute or two, the site is available at `https://misdianti.github.io/<repository-name>/`.
+4. Wait for the **pages build and deployment** run in the **Actions** tab to finish. The site updates within a few minutes.
 
-To publish at `https://misdianti.github.io/` with no sub-path, name the repository `misdianti.github.io`.
+**Why `.nojekyll`?** By default GitHub Pages runs a Jekyll build, which can publish `README.md` as the home page instead of `index.html`. The empty `.nojekyll` file turns that build off, so `index.html` is served exactly as written.
+
+**Changes not showing?** GitHub Pages and browsers cache pages for several minutes. Hard refresh (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows) or open the site in a private window.
 
 ## A note on confidentiality
 
